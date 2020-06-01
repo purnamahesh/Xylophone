@@ -1,6 +1,6 @@
 # xylophone
 
-Xylophone by Purna Mahesh
+Basic Flutter Application which is a simulation of Music Instrument called Xylophone. Xylophone is a muisc instrument which produce different notes when a certain bar is tapped.
 
 ## Getting Started
 
