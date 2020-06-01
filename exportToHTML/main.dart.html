@@ -1,0 +1,62 @@
+<html>
+<head>
+<title>main.dart</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #a9b7c6;}
+.s1 { color: #6a8759;}
+.s2 { color: #cc7832;}
+.s3 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+main.dart</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">'package:flutter/material.dart'</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">'package:audioplayers/audio_cache.dart'</span><span class="s2">;</span>
+
+<span class="s2">void </span><span class="s0">main() =&gt; runApp(</span>
+      <span class="s0">MaterialApp(</span>
+        <span class="s0">home: Page()</span><span class="s2">,</span>
+      <span class="s0">)</span><span class="s2">,</span>
+    <span class="s0">)</span><span class="s2">;</span>
+
+<span class="s2">class </span><span class="s0">Page </span><span class="s2">extends </span><span class="s0">StatefulWidget {</span>
+  <span class="s0">@override</span>
+  <span class="s0">_PageState createState() =&gt; _PageState()</span><span class="s2">;</span>
+<span class="s0">}</span>
+
+<span class="s2">class </span><span class="s0">_PageState </span><span class="s2">extends </span><span class="s0">State&lt;Page&gt; {</span>
+  <span class="s2">final </span><span class="s0">player = AudioCache()</span><span class="s2">;</span>
+  <span class="s0">Expanded buildExpanded(MaterialColor c</span><span class="s2">, </span><span class="s0">int i) {</span>
+    <span class="s2">return </span><span class="s0">Expanded(</span>
+      <span class="s0">child: FlatButton(</span>
+        <span class="s0">color: c</span><span class="s2">,</span>
+        <span class="s0">onPressed: () {</span>
+          <span class="s0">player.play(</span><span class="s1">'note</span><span class="s0">$i</span><span class="s1">.wav'</span><span class="s0">)</span><span class="s2">;</span>
+        <span class="s0">}</span><span class="s2">,</span>
+      <span class="s0">)</span><span class="s2">,</span>
+    <span class="s0">)</span><span class="s2">;</span>
+  <span class="s0">}</span>
+
+  <span class="s0">@override</span>
+  <span class="s0">Widget build(BuildContext context) {</span>
+    <span class="s2">return </span><span class="s0">Column(</span>
+      <span class="s0">crossAxisAlignment: CrossAxisAlignment.stretch</span><span class="s2">,</span>
+      <span class="s0">children: &lt;Widget&gt;[</span>
+        <span class="s0">buildExpanded(Colors.red</span><span class="s2">, </span><span class="s3">1</span><span class="s0">)</span><span class="s2">,</span>
+        <span class="s0">buildExpanded(Colors.orange</span><span class="s2">, </span><span class="s3">2</span><span class="s0">)</span><span class="s2">,</span>
+        <span class="s0">buildExpanded(Colors.yellow</span><span class="s2">, </span><span class="s3">3</span><span class="s0">)</span><span class="s2">,</span>
+        <span class="s0">buildExpanded(Colors.green</span><span class="s2">, </span><span class="s3">4</span><span class="s0">)</span><span class="s2">,</span>
+        <span class="s0">buildExpanded(Colors.blue</span><span class="s2">, </span><span class="s3">5</span><span class="s0">)</span><span class="s2">,</span>
+        <span class="s0">buildExpanded(Colors.purple</span><span class="s2">, </span><span class="s3">6</span><span class="s0">)</span><span class="s2">,</span>
+      <span class="s0">]</span><span class="s2">,</span>
+    <span class="s0">)</span><span class="s2">;</span>
+  <span class="s0">}</span>
+<span class="s0">}</span>
+</pre>
+</body>
+</html>
